@@ -1,0 +1,56 @@
+// AddIn.idl : IDL source for AddIn
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddIn.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(4F44D13D-78B3-41A1-9750-9DE28F76A500),
+	version(1.0),
+	helpstring("FindVisioCommandAddin 1.0 Type Library")
+]
+library AddinLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		object,
+		uuid(AF31E0EB-48CF-4a3b-893F-E999A0E29944),
+		dual,
+		pointer_default(unique)
+	]
+	interface ICallbackInterface : IDispatch
+	{
+		[id(1)] 
+		HRESULT ButtonClicked([in] IDispatch * RibbonControl);
+
+		[id(2)]
+		HRESULT IsRibbonButtonVisible([in] IDispatch * RibbonControl, [out, retval] VARIANT_BOOL* pResult);
+
+		[id(3)]
+		HRESULT OnRibbonComboBoxChange([in] IDispatch* RibbonControl, [in] BSTR *pbstrText);
+
+		[id(4)]
+		HRESULT GetRibbonComboBoxItemCount([in] IDispatch*pControl, [out, retval] long *count);
+
+		[id(5)]
+		HRESULT GetRibbonComboBoxText([in] IDispatch*pControl, [out, retval] BSTR *pbstrText);
+
+		[id(6)]
+		HRESULT GetRibbonComboBoxItemLabel([in] IDispatch*pControl, [in] long cIndex, [out, retval] BSTR *pbstrLabel);
+
+		[id(10)]
+		HRESULT OnRibbonLoad([in] IDispatch* disp);
+	};
+	[
+		uuid(FB8A6867-8804-4DEC-83D8-76F91B640BFA),
+		helpstring("Connect Class")
+	]
+	coclass Connect
+	{
+		[default] interface ICallbackInterface;
+	};
+};

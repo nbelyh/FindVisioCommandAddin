@@ -1,0 +1,26 @@
+HKCR
+{
+	FindVisioCommandAddin.Connect.1 = s 'Connect Class'
+	{
+		CLSID = s '{FB8A6867-8804-4DEC-83D8-76F91B640BFA}'
+	}
+	FindVisioCommandAddin.Connect = s 'Connect Class'
+	{
+		CLSID = s '{FB8A6867-8804-4DEC-83D8-76F91B640BFA}'
+		CurVer = s 'FindVisioCommandAddin.Connect.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{FB8A6867-8804-4DEC-83D8-76F91B640BFA}' = s 'Connect Class'
+		{
+			ProgID = s 'FindVisioCommandAddin.Connect.1'
+			VersionIndependentProgID = s 'FindVisioCommandAddin.Connect'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{4F44D13D-78B3-41A1-9750-9DE28F76A500}'
+		}
+	}
+}
