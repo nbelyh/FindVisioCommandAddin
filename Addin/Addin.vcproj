@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9.00"
+	Version="9,00"
 	Name="Addin"
 	ProjectGUID="{7BF6658F-2268-4B0F-AC4B-E8D413353208}"
 	RootNamespace="Addin"
@@ -438,7 +438,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\RibbonMap.txt"
+			RelativePath=".\RibbonMap-de.txt"
+			>
+		</File>
+		<File
+			RelativePath=".\RibbonMap-en.txt"
+			>
+		</File>
+		<File
+			RelativePath=".\RibbonMap-jp.txt"
+			>
+		</File>
+		<File
+			RelativePath=".\RibbonMap-ru.txt"
 			>
 		</File>
 		<File

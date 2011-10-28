@@ -7,7 +7,11 @@
 #define IDR_CONNECT                     102
 #define IDR_RIBBON                      201
 #define IDD_DIALOG1                     202
-#define IDR_RIBBON_MAP                  203
+
+#define IDR_RIBBON_MAP_EN                  203
+#define IDR_RIBBON_MAP_DE                  204
+#define IDR_RIBBON_MAP_RU                  205
+#define IDR_RIBBON_MAP_JP                  206
 
 // Next default values for new objects
 // 

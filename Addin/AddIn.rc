@@ -27,7 +27,10 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 //
 
 IDR_RIBBON              TEXTFILE                "Ribbon.xml"
-IDR_RIBBON_MAP          TEXTFILE                "RibbonMap.txt"
+IDR_RIBBON_MAP_EN       TEXTFILE                "RibbonMap-en.txt"
+IDR_RIBBON_MAP_DE       TEXTFILE                "RibbonMap-de.txt"
+IDR_RIBBON_MAP_RU       TEXTFILE                "RibbonMap-ru.txt"
+IDR_RIBBON_MAP_JP       TEXTFILE                "RibbonMap-jp.txt"
 
 /////////////////////////////////////////////////////////////////////////////
 //

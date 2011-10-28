@@ -18,7 +18,7 @@ CString LoadTextFile(UINT resource_id)
 	HRSRC rc = ::FindResource(
 		hResources, MAKEINTRESOURCE(resource_id), L"TEXTFILE");
 
-	LPSTR content = static_cast<LPSTR>(
+	LPWSTR content = static_cast<LPWSTR>(
 		::LockResource(::LoadResource(hResources, rc)));
 
 	DWORD content_length = 
@@ -35,7 +35,7 @@ STDMETHODIMP CConnect::OnConnection(IDispatch *pApplication, ext_ConnectMode, ID
 	pApplication->QueryInterface(__uuidof(IDispatch), (LPVOID*)&m_pApplication);
 	pAddInInst->QueryInterface(__uuidof(IDispatch), (LPVOID*)&m_pAddInInstance);
 
-	CString string_map = LoadTextFile(IDR_RIBBON_MAP);
+	CString string_map = LoadTextFile(IDR_RIBBON_MAP_JP);
 
 	LPCWSTR begin = string_map;
 	LPCWSTR end = string_map;
