@@ -25,13 +25,13 @@ library AddinLib
 	interface ICallbackInterface : IDispatch
 	{
 		[id(1)] 
-		HRESULT ButtonClicked([in] IDispatch * RibbonControl);
+		HRESULT OnRibbonButtonClicked([in] IDispatch * pControl);
 
 		[id(2)]
-		HRESULT IsRibbonButtonVisible([in] IDispatch * RibbonControl, [out, retval] VARIANT_BOOL* pResult);
+		HRESULT IsRibbonButtonVisible([in] IDispatch * pControl, [out, retval] VARIANT_BOOL* pResult);
 
 		[id(3)]
-		HRESULT OnRibbonComboBoxChange([in] IDispatch* RibbonControl, [in] BSTR *pbstrText);
+		HRESULT OnRibbonComboBoxChange([in] IDispatch* pControl, [in] BSTR *pbstrText);
 
 		[id(4)]
 		HRESULT GetRibbonComboBoxItemCount([in] IDispatch*pControl, [out, retval] long *count);
@@ -42,8 +42,20 @@ library AddinLib
 		[id(6)]
 		HRESULT GetRibbonComboBoxItemLabel([in] IDispatch*pControl, [in] long cIndex, [out, retval] BSTR *pbstrLabel);
 
+		[id(7)]
+		HRESULT GetRibbonLabel([in] IDispatch*pControl, [out, retval] BSTR *pbstrLabel);
+
 		[id(10)]
 		HRESULT OnRibbonLoad([in] IDispatch* disp);
+
+		[id(11)]
+		HRESULT OnRibbonLoadImage([in] BSTR *pbstrImageId, [out, retval] IPictureDisp ** ppdispImage);
+
+		[id(13)]
+		HRESULT IsLanguageChecked([in] IDispatch * pControl, [out, retval] VARIANT_BOOL* pResult);
+
+		[id(14)]
+		HRESULT OnLanguageCheck([in] IDispatch* pControl, [in] VARIANT_BOOL *pvarfPressed);
 	};
 	[
 		uuid(FB8A6867-8804-4DEC-83D8-76F91B640BFA),

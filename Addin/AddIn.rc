@@ -13,6 +13,39 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
+// Japanese resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RibbonTab           "ѓRѓ}ѓ“ѓh‚МЊџЌх"
+    IDS_RibbonGroupFind     "ѓRѓ}ѓ“ѓh‚МЊџЌх"
+    IDS_RibbonComboBox      " ѓRѓ}ѓ“ѓh‚МЊџЌх: "
+    IDS_RibbonLanguageMenu  "ЊѕЊк"
+    IDS_RibbonLanguageEN    "‰pЊк"
+    IDS_RibbonLanguageDE    "ѓhѓCѓcЊк"
+    IDS_RibbonLanguageRU    "ѓЌѓVѓAЊк"
+    IDS_RibbonLanguageJP    "“ъ–{Њк"
+    IDS_RibbonSearchResults "ЊџЌх‚МЊ‹‰К"
+END
+
+IDR_RIBBON_MAP       TEXTFILE                "res\\RibbonMap-jp.txt"
+
+#endif    // Japanese resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
 // Russian resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
@@ -23,46 +56,57 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// TEXTFILE
+// String Table
 //
 
-IDR_RIBBON              TEXTFILE                "Ribbon.xml"
-IDR_RIBBON_MAP_EN       TEXTFILE                "RibbonMap-en.txt"
-IDR_RIBBON_MAP_DE       TEXTFILE                "RibbonMap-de.txt"
-IDR_RIBBON_MAP_RU       TEXTFILE                "RibbonMap-ru.txt"
-IDR_RIBBON_MAP_JP       TEXTFILE                "RibbonMap-jp.txt"
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Dialog
-//
-
-IDD_DIALOG1 DIALOGEX 0, 0, 316, 182
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
-FONT 8, "MS Shell Dlg", 400, 0, 0x1
+STRINGTABLE 
 BEGIN
+    IDS_RibbonTab           "Поиск команд"
+    IDS_RibbonGroupFind     "Поиск команд"
+    IDS_RibbonComboBox      " Найти команду: "
+    IDS_RibbonLanguageMenu  "Язык"
+    IDS_RibbonLanguageEN    "Английский"
+    IDS_RibbonLanguageDE    "Немецкий"
+    IDS_RibbonLanguageRU    "Русский"
+    IDS_RibbonLanguageJP    "Японский"
+    IDS_RibbonSearchResults " Результаты поиска "
 END
 
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// DESIGNINFO
-//
-
-#ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
-BEGIN
-    IDD_DIALOG1, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 309
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 175
-    END
-END
-#endif    // APSTUDIO_INVOKED
+IDR_RIBBON_MAP       TEXTFILE                "res\\RibbonMap-ru.txt"
 
 #endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RibbonTab           "Befehl Suchen"
+    IDS_RibbonGroupFind     "Befehl Suchen"
+    IDS_RibbonComboBox      " Befehl Suchen: "
+    IDS_RibbonLanguageMenu  "Sprache"
+    IDS_RibbonLanguageEN    "Englisch"
+    IDS_RibbonLanguageDE    "Deutsch"
+    IDS_RibbonLanguageRU    "Russisch"
+    IDS_RibbonLanguageJP    "Japaner"
+    IDS_RibbonSearchResults " Suchergebnisse "
+END
+
+IDR_RIBBON_MAP       TEXTFILE                "res\\RibbonMap-de.txt"
+#endif    // German (Germany) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
@@ -74,6 +118,44 @@ END
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
 #endif //_WIN32
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RibbonTab           "Find Command"
+    IDS_RibbonGroupFind     "Find Command"
+    IDS_RibbonComboBox      " Find Command: "
+    IDS_RibbonLanguageMenu  "Language"
+    IDS_RibbonLanguageEN    "English"
+    IDS_RibbonLanguageDE    "German"
+    IDS_RibbonLanguageRU    "Russian"
+    IDS_RibbonLanguageJP    "Japanese"
+    IDS_RibbonSearchResults " Search Results "
+END
+
+IDR_RIBBON_MAP       TEXTFILE                "res\\RibbonMap-en.txt"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTFILE
+//
+
+IDR_RIBBON              TEXTFILE                "res\\Ribbon.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+FINDBUTTON              PNG                     "res\\FindButton.png"
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -146,21 +228,6 @@ END
 //
 
 IDR_ADDIN               REGISTRY                "AddIn.rgs"
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// String Table
-//
-
-STRINGTABLE 
-BEGIN
-    IDS_PROJNAME            "AddIn"
-END
-
-#endif    // English (U.S.) resources
-/////////////////////////////////////////////////////////////////////////////
-
-
 
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////

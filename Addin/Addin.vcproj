@@ -422,6 +422,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\res\AddinIcon.ico"
+			>
+		</File>
+		<File
+			RelativePath="..\AddinSetup\AddinIcon.ico"
+			>
+		</File>
+		<File
 			RelativePath="Connect.cpp"
 			>
 		</File>
@@ -430,27 +438,31 @@
 			>
 		</File>
 		<File
+			RelativePath=".\res\FindButton.png"
+			>
+		</File>
+		<File
 			RelativePath="Resource.h"
 			>
 		</File>
 		<File
-			RelativePath=".\Ribbon.xml"
+			RelativePath=".\res\Ribbon.xml"
 			>
 		</File>
 		<File
-			RelativePath=".\RibbonMap-de.txt"
+			RelativePath=".\res\RibbonMap-de.txt"
 			>
 		</File>
 		<File
-			RelativePath=".\RibbonMap-en.txt"
+			RelativePath=".\res\RibbonMap-en.txt"
 			>
 		</File>
 		<File
-			RelativePath=".\RibbonMap-jp.txt"
+			RelativePath=".\res\RibbonMap-jp.txt"
 			>
 		</File>
 		<File
-			RelativePath=".\RibbonMap-ru.txt"
+			RelativePath=".\res\RibbonMap-ru.txt"
 			>
 		</File>
 		<File
