@@ -5,17 +5,26 @@
 
 namespace {
 
+	#define DEFAULT_LANGUAGE 1033
+
 	int GetAppLanguage(CComPtr<IDispatch> app)
 	{
 		CComDispatchDriver disp = app;
 
 		variant_t v_language_settings;
-		disp.GetPropertyByName(L"LanguageSettings", &v_language_settings);
+		if (FAILED(disp.GetPropertyByName(L"LanguageSettings", &v_language_settings)))
+			return DEFAULT_LANGUAGE;
 
-		LanguageSettingsPtr language_settings  = v_language_settings;
+		if (V_VT(&v_language_settings) != VT_DISPATCH)
+			return DEFAULT_LANGUAGE;
+
+		LanguageSettingsPtr language_settings;
+		if (FAILED(V_DISPATCH(&v_language_settings)->QueryInterface(__uuidof(LanguageSettings), (void**)&language_settings)))
+			return DEFAULT_LANGUAGE;
 
 		int app_language = 0;
-		language_settings->get_LanguageID(msoLanguageIDUI, &app_language);
+		if (FAILED(language_settings->get_LanguageID(msoLanguageIDUI, &app_language)))
+			return DEFAULT_LANGUAGE;
 
 		switch (app_language)
 		{
@@ -24,12 +33,9 @@ namespace {
 		case 1049:
 		case 1041:
 			return app_language;
-
-		default:
-			return 1033;
 		}
 
-		return app_language;
+		return DEFAULT_LANGUAGE;
 	}
 
 	struct LanguageLock
