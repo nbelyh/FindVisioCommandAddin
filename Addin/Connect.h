@@ -24,7 +24,7 @@ DECLARE_NOT_AGGREGATABLE(CVisioConnect)
 
 BEGIN_COM_MAP(CVisioConnect)
 	COM_INTERFACE_ENTRY2(IDispatch, ICallbackInterface)
-	COM_INTERFACE_ENTRY(IDTExtensibility2)
+	COM_INTERFACE_ENTRY(_IDTExtensibility2)
 	COM_INTERFACE_ENTRY(IRibbonExtensibility)
 	COM_INTERFACE_ENTRY(ICallbackInterface)
 END_COM_MAP()

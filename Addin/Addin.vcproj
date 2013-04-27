@@ -422,10 +422,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\res\AddinIcon.ico"
-			>
-		</File>
-		<File
 			RelativePath="..\AddinSetup\AddinIcon.ico"
 			>
 		</File>
