@@ -94,7 +94,7 @@ namespace {
 		DWORD content_length = 
 			::SizeofResource(hResources, rc);
 
-		return CString(content, content_length);
+		return CString(content, content_length / 2);
 	}
 
 	int GetLanguageIdFromControlId(const CString& control_id)
